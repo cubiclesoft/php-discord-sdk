@@ -32,6 +32,7 @@ Set up Discord API access:
 Create a 30 minute, single use invite for temporary members:
 
 ```php
+<?php
 	require_once "support/sdk_discord.php";
 
 	// Replace the string with the bot token above.
@@ -65,6 +66,7 @@ Create a 30 minute, single use invite for temporary members:
 	$url = "https://discord.gg/" . $result["data"]["code"];
 
 	echo $url . "\n";
+?>
 ```
 
 Getting Started (Webhook)
@@ -99,6 +101,7 @@ Send a webhook notification that posts a message in a channel:
 
 		exit();
 	}
+?>
 ```
 
 Send a webhook notification that posts a message with a file attachment in a channel:
