@@ -26,7 +26,7 @@ Setting up Discord API access:
 * Scroll to the bottom of the Bot section and calculate the permissions integer for the APIs you plan on accessing.  The example code below requires the "Create Instant Invite" permission.
 * Go to the General Information tab and copy the "Client ID" to the clipboard.
 * In a new browser tab, visit `https://discord.com/oauth2/authorize?client_id=YOUR_APP_CLIENT_ID&scope=bot&permissions=YOUR_PERMISSIONS_INTEGER`
-* If all goes well, Discord should ask which Discord server the bot should join and then perform a verification step.
+* If all goes well, Discord should ask which server the bot should join and then perform a verification step.
 * Back in the Application, go to the Bot tab and copy the "Token" to the clipboard.
 
 Creating a 30 minute, single use invite for temporary members:
