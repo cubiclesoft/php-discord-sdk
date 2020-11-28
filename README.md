@@ -14,10 +14,10 @@ Features
 * Designed for relatively painless integration into your project.
 * Sits on GitHub for all of that pull request and issue tracker goodness to easily submit changes and ideas respectively.
 
-Getting Started
----------------
+Getting Started (API)
+---------------------
 
-Setting up Discord API access:
+Set up Discord API access:
 
 * Visit `https://discord.com/developers/applications`.
 * Create a New Application.  Name it something sensible such as "Invite Bot" or whatever the associated bot will do in the server.
@@ -29,13 +29,16 @@ Setting up Discord API access:
 * If all goes well, Discord should ask which server the bot should join and then perform a verification step.
 * Back in the Application, go to the Bot tab and copy the "Token" to the clipboard.
 
-Creating a 30 minute, single use invite for temporary members:
+Create a 30 minute, single use invite for temporary members:
 
 ```php
 	require_once "support/sdk_discord.php";
 
-	// Replace the string with the Webhook URL above.
+	// Replace the string with the bot token above.
 	$bottoken = "YOUR_BOT_TOKEN_HERE";
+
+	// Replace this with a valid channel ID.
+	// The channel ID can be found at the end of the URL in Discord.
 	$channelid = "YOUR_CHANNEL_ID_HERE";
 
 	// Create a temporary invite.
@@ -64,14 +67,17 @@ Creating a 30 minute, single use invite for temporary members:
 	echo $url . "\n";
 ```
 
-Setting up a webhook in Discord:
+Getting Started (Webhook)
+-------------------------
+
+Set up a webhook in Discord:
 
 * Go to Server Settings in a Discord server (must be the owner).
 * Integrations -> Webhooks -> New Webhook.
 * Name the webhook and assign it to a Discord channel.
 * Click the 'Copy Webhook URL' button.
 
-Sending a webhook notification that posts a message in a channel:
+Send a webhook notification that posts a message in a channel:
 
 ```php
 <?php
@@ -95,7 +101,7 @@ Sending a webhook notification that posts a message in a channel:
 	}
 ```
 
-Sending a webhook notification that posts a message with a file attachment in a channel:
+Send a webhook notification that posts a message with a file attachment in a channel:
 
 ```php
 <?php
