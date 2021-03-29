@@ -136,7 +136,7 @@ Send a webhook notification that posts a message with a file attachment in a cha
 //			"data" => file_get_contents("/path/to/mycat.jpg")
 //		),
 //		array(
-//			"name" => "file",
+//			"name" => "file2",
 //			"filename" => "othercat.jpg",
 //			"type" => "image/jpeg",
 //			"data" => file_get_contents("/path/to/othercat.jpg")
