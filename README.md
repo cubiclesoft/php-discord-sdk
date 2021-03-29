@@ -127,6 +127,22 @@ Send a webhook notification that posts a message with a file attachment in a cha
 		"data" => file_get_contents("/path/to/mycat.jpg")
 	);
 
+	// OR attach multiple files.
+//	$fileinfo = array(
+//		array(
+//			"name" => "file",
+//			"filename" => "mycat.jpg",
+//			"type" => "image/jpeg",
+//			"data" => file_get_contents("/path/to/mycat.jpg")
+//		),
+//		array(
+//			"name" => "file",
+//			"filename" => "othercat.jpg",
+//			"type" => "image/jpeg",
+//			"data" => file_get_contents("/path/to/othercat.jpg")
+//		),
+//	);
+
 	$result = DiscordSDK::SendWebhookMessage($url, $options, $fileinfo);
 	if (!$result["success"])
 	{
